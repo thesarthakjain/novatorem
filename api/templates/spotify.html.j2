@@ -1,16 +1,20 @@
-<svg width="480" height="173" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <foreignObject width="480" height="133">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
+                div {
+                    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+                }
+
                 .main {
-                    margin-top: 40px;
+                    /*margin-top: 40px;*/
                     display: flex;
                 }
 
                 .currentStatus {
+                    position: static;
                     float: left;
                     font-size: 24px;
-                    position: static;
                     margin-top: -5px;
                     margin-left: 10px;
                 }
@@ -21,8 +25,8 @@
                 }
 
                 .art {
-                    width: 27%;
                     float: left;
+                    width: 27%;
                     margin-left: -5px;
                 }
 
@@ -31,69 +35,65 @@
                 }
 
                 .song {
-                    color: #666;
-                    overflow:hidden;
-                    margin-top: 3px;
                     font-size: 24px;
+                    color: #666;
                     text-align: center;
+                    margin-top: 3px;
                     white-space:nowrap;
+                    overflow:hidden;
                     text-overflow:ellipsis;
                 }
 
                 .artist {
-                    color: #b3b3b3;
                     font-size: 20px;
-                    margin-top: 4px;
+                    color: #b3b3b3;
                     text-align: center;
                     margin-bottom: 5px;
+                    margin-top: 4px;
                 }
 
                 .cover {
-                    width: 100px;
-                    height: 100px;
                     border-radius: 5px;
+                    height: 100px;
+                    width: 100px;
                 }
 
                 #bars {
-                    width: 40px;
                     height: 30px;
                     bottom: 23px;
-                    position: absolute;
                     margin: -20px 0 0 0px;
+                    position: absolute;
+                    width: 40px;
                 }
 
                 .bar {
-                    width: 3px;
+                    background: #1DB954cc;
                     bottom: 1px;
                     height: 3px;
                     position: absolute;
-                    background: #1DB954cc;
+                    width: 3px;
                     animation: sound 0ms -800ms linear infinite alternate;
-                }
-                
-                div {
-                    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
                 }
                 
                 @keyframes sound {
                     0% {
-                        height: 3px;
                         opacity: .35;
+                        height: 3px;
                     }
 
                     100% {
+                        opacity: 1;
                         height: 15px;
-                        opacity: 0.95;
                     }
                 }
 
                 {{barCSS|safe}}
             </style>
 
-            <div class="currentStatus">{{status}}</div>
+            <!-- <div class="currentStatus">{{status}}</div> -->
 
             <div class="main">
-                <a class="art" href="{}" target="_blank">
+                <a class="art" href="{}" target="_BLANK">
                     <center>
                         <img src="data:image/png;base64, {{image}}" class="cover" />
                     </center>
